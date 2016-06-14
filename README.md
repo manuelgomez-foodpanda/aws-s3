@@ -1,6 +1,7 @@
 # manuelgomez-foodpanda/aws-s3
 
 Fork of [convox/aws-s3](https://hub.docker.com/r/convox/aws-s3)
+
 Uses [fakes3](https://github.com/jubos/fake-s3) to run a local S3 daemon with custom credentials and bucket name.
 
 ## Usage
@@ -9,4 +10,5 @@ Uses [fakes3](https://github.com/jubos/fake-s3) to run a local S3 daemon with cu
 
 ## License
 This version: Apache 2.0 Manuel Gómez
+
 Original version: Apache 2.0 &copy; 2015 Convox, Inc.
