@@ -30,10 +30,11 @@ fi
 export AWS_ACCESS="${AWS_ACCESS}";
 export AWS_SECRET="${AWS_SECRET}";
 export AWS_BUCKET="${AWS_BUCKET}";
+EXPOSED_ADDR=$(ip addr show dev eth0 | grep "inet " | cut -d ' ' -f 6  | cut -f 1 -d '/')
 
 echo "Starting fakeS3 instance with parameters:"
-echo "---------------------------------------------------------------------------"
-echo "AWS_BUCKET: $AWS_BUCKET / AWS_SECRET: $AWS_SECRET / AWS_ACCESS: $AWS_ACCESS"
-echo "---------------------------------------------------------------------------"
+echo "-----------------------------------------------------------------------------------------------"
+echo "IP: $EXPOSED_ADDR / AWS_BUCKET: $AWS_BUCKET / AWS_SECRET: $AWS_SECRET / AWS_ACCESS: $AWS_ACCESS"
+echo "-----------------------------------------------------------------------------------------------"
 
 bash -c "/opt/fakes3/bin/fakes3-convox"
